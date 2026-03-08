@@ -8,6 +8,7 @@ Use Rust when the project needs native performance, predictable resource usage, 
 - Do not use `rustfmt` as a required part of this workflow.
 - Use `insta` for snapshot testing.
 - Add benchmarks early and maintain broad benchmark coverage.
+- Use Cargo workspaces for multi-crate projects.
 - Use `mise` to manage the development environment and task entry points.
 
 ## Interop and Targets
@@ -37,10 +38,13 @@ Use Rust when the project needs native performance, predictable resource usage, 
 - Split code into separate files aggressively.
 - Prefer narrow modules with explicit responsibilities.
 - Place examples under `./examples`.
+- Keep workspace crates under `./crates`.
 
 ## Development Workflow
 
 - Make `mise run dev` start the development environment in one command.
+- For CLI tools, make `mise run cli` expose the Rust executable through the shared task entry point.
+- Back `mise run cli` with a dev build for Rust because release builds are too slow during development.
 - Make `mise run fmt` participate in the shared repository workflow without making `rustfmt` a required Rust formatter.
 - Make `mise run lint` run the Rust lint workflow from the shared repository entry point.
 - Make `mise run check` run the Rust check workflow from the shared repository entry point.

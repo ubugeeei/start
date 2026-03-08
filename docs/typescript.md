@@ -7,6 +7,7 @@ Use TypeScript when the project needs strong compatibility with the JavaScript e
 - Target `Node.js 24+`.
 - Use `pnpm` as the package manager.
 - Use `pnpm workspace` for monorepos and multi-package projects.
+- Place workspace packages under `./packages`.
 - Use `mise` to manage the development environment and task entry points.
 
 ## Formatting, Linting, and Testing
@@ -29,6 +30,7 @@ Use TypeScript when the project needs strong compatibility with the JavaScript e
 ## Development Workflow
 
 - Make `mise run dev` start the development environment in one command.
+- For CLI tools, make `mise run cli` expose the TypeScript executable through the shared task entry point.
 - Make `mise run fmt` run the TypeScript formatting workflow from the shared repository entry point.
 - Make `mise run lint` run the TypeScript lint workflow from the shared repository entry point.
 - Make `mise run check` run the TypeScript static check workflow from the shared repository entry point.
@@ -61,6 +63,7 @@ Use TypeScript when the project needs strong compatibility with the JavaScript e
 - Split code into separate files aggressively when responsibilities begin to mix.
 - Prefer minimal, focused modules over large multi-purpose files.
 - Place examples under `./examples`.
+- Keep multi-package TypeScript code under `./packages`.
 
 ## CI and Publishing
 

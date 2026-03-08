@@ -12,6 +12,7 @@ This directory contains the default technology choices and engineering rules for
 
 - Use `mise` for environment setup.
 - Make `mise run dev` start the full development environment in one command.
+- For CLI tools, provide `mise run cli` so the executable is available without manual PATH setup.
 - Standardize common project tasks behind `mise` instead of ad-hoc shell commands.
 - Make `mise run fmt` run repository formatting workflows in one command.
 - Make `mise run lint` run JS, TS, and Rust lint workflows in one command.
@@ -36,6 +37,9 @@ This directory contains the default technology choices and engineering rules for
 ## Repository Layout
 
 - Place examples under `./examples`.
+- Place TypeScript packages under `./packages`.
+- Place Rust crates under `./crates`.
+- Use workspace features instead of ad-hoc multi-package layouts.
 
 ## General Principle
 

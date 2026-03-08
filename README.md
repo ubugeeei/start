@@ -6,12 +6,6 @@ Default technology selection and engineering rules for AI-assisted project creat
 
 A set of opinionated guidelines that AI agents follow when scaffolding new projects. Covers stack choices, tooling defaults, code style, and CI/CD conventions.
 
-## Stacks
-
-- **TypeScript** — Node.js 24+, pnpm, oxfmt, oxlint, vitest, tsdown
-- **Rust** — clippy, insta, napi-rs, wasm support
-- **Vue** — Vite v8, component-oriented architecture
-
 ## Key Principles
 
 - Predictable tooling with `mise` as the single task runner
@@ -19,6 +13,24 @@ A set of opinionated guidelines that AI agents follow when scaffolding new proje
 - Strong static guarantees
 - Small, focused modules
 - Low allocation overhead where performance matters
+
+## Usage
+
+Fetch individual guideline files via the GitHub API:
+
+```sh
+# Tech selection overview
+gh api repos/ubugeeei/start/contents/tech_selection.md --jq '.content' | base64 -d
+
+# TypeScript
+gh api repos/ubugeeei/start/contents/typescript.md --jq '.content' | base64 -d
+
+# Rust
+gh api repos/ubugeeei/start/contents/rust.md --jq '.content' | base64 -d
+
+# Vue
+gh api repos/ubugeeei/start/contents/vue.md --jq '.content' | base64 -d
+```
 
 ## License
 

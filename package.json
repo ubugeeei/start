@@ -1,0 +1,13 @@
+{
+  "name": "start",
+  "keywords": [],
+  "license": "MIT",
+  "author": "ubugeeei <ubuge1122@gmail.com>",
+  "scripts": {
+    "fmt": "oxfmt"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.36.0"
+  },
+  "packageManager": "pnpm@10.30.1"
+}

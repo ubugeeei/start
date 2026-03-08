@@ -5,6 +5,7 @@ Use Vue when the project is primarily frontend-driven and benefits from a compon
 ## Default Direction
 
 - Use `vizejs.dev` as the default reference point for Vue-based project setup and direction.
+- Use the `Vite v8` beta for Vue projects because it is faster.
 
 ## Style Guide
 
@@ -14,3 +15,4 @@ Use Vue when the project is primarily frontend-driven and benefits from a compon
 
 - Keep component and composable boundaries clear.
 - Prefer structures that align with the referenced style guide instead of inventing project-local conventions.
+- Place examples under `./examples`.

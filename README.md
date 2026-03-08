@@ -20,16 +20,16 @@ Fetch individual guideline files via the GitHub API:
 
 ```sh
 # Tech selection overview
-gh api repos/ubugeeei/start/contents/tech_selection.md --jq '.content' | base64 -d
+gh api repos/ubugeeei/start/contents/docs/general.md --jq '.content' | base64 -d
 
 # TypeScript
-gh api repos/ubugeeei/start/contents/typescript.md --jq '.content' | base64 -d
+gh api repos/ubugeeei/start/contents/docs/typescript.md --jq '.content' | base64 -d
 
 # Rust
-gh api repos/ubugeeei/start/contents/rust.md --jq '.content' | base64 -d
+gh api repos/ubugeeei/start/contents/docs/rust.md --jq '.content' | base64 -d
 
 # Vue
-gh api repos/ubugeeei/start/contents/vue.md --jq '.content' | base64 -d
+gh api repos/ubugeeei/start/contents/docs/vue.md --jq '.content' | base64 -d
 ```
 
 ## License

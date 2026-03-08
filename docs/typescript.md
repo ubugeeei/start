@@ -68,5 +68,7 @@ Use TypeScript when the project needs strong compatibility with the JavaScript e
 - Trigger release workflows from tag pushes.
 - Use npm trusted publishing.
 - Do not store npm tokens in GitHub Actions.
-- Make npm publishing workspace-aware.
+- Make npm publishing workspace-aware using `pnpm publish` with `workspace:` protocol resolution.
+- Perform the initial publish from the local CLI, not from CI.
+- Authenticate to npm using passkeys (`npm login --auth-type=web`).
 - Ensure the publish workflow builds and bundles each package correctly before publishing.

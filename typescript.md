@@ -15,11 +15,14 @@ Use TypeScript when the project needs strong compatibility with the JavaScript e
 - Configure formatting with `trailingComma: true`.
 - Use double quotes by default.
 - Use `oxlint` with `--type-aware` and `--type-check`.
+- Do not use `tsc`.
+- Use `oxlint --type-aware --type-check` for static checking.
 - Use `vitest` for testing.
 
 ## Build and Content Tooling
 
 - Use `tsdown` for builds.
+- Let `tsdown` handle compilation.
 - Use `ox-content` when content processing is needed.
 
 ## Script Execution Rules

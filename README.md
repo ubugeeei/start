@@ -8,7 +8,7 @@ A set of opinionated guidelines that AI agents follow when scaffolding new proje
 
 ## Key Principles
 
-- Predictable tooling with `mise` as the single task runner
+- Predictable tooling with a single stack-appropriate task entry point
 - Minimal incidental complexity
 - Strong static guarantees
 - Small, focused modules

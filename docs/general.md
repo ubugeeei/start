@@ -10,21 +10,18 @@ This directory contains the default technology choices and engineering rules for
 
 ## Development Environment
 
-- Use `mise` for environment setup.
-- Make `mise run dev` start the full development environment in one command.
-- For CLI tools, provide `mise run cli` so the executable is available without manual PATH setup.
-- Standardize common project tasks behind `mise` instead of ad-hoc shell commands.
-- Make `mise run fmt` run repository formatting workflows in one command.
-- Make `mise run lint` run JS, TS, and Rust lint workflows in one command.
-- Make `mise run check` run JS, TS, and Rust check workflows in one command.
-- Make `mise run test` run JS, TS, and Rust test workflows in one command.
+- Use a single shared task entry point instead of ad-hoc shell commands.
+- For TypeScript projects, use `Vite+` with `vite-task` and run tasks through `vp`.
+- Make the stack entry point start the full development environment in one command.
+- For CLI tools, expose the executable through the shared task entry point.
+- Make formatting, lint, check, and test workflows available from the shared task entry point.
 
 ## Release Workflow
 
-- Use `mise run release patch` for patch releases.
-- Use `mise run release minor` for minor releases.
-- Use `mise run release alpha` for alpha releases.
-- Use `mise run release beta` for beta releases.
+- Provide a single-command workflow for patch releases.
+- Provide a single-command workflow for minor releases.
+- Provide a single-command workflow for alpha releases.
+- Provide a single-command workflow for beta releases.
 - Make each release command update the version and create the corresponding Git tag.
 
 ## CI and Release Automation

@@ -12,6 +12,7 @@ This directory contains the default technology choices and engineering rules for
 
 - Use a single shared task entry point instead of ad-hoc shell commands.
 - For TypeScript projects, use `Vite+` with `vite-task` and run tasks through `vp`.
+- For Rust projects, use `nix` flakes for the toolchain. Enter the environment with `nix develop` and expose shared tasks through `Vite Task` with `vp run`.
 - Make the stack entry point start the full development environment in one command.
 - For CLI tools, expose the executable through the shared task entry point.
 - Make formatting, lint, check, and test workflows available from the shared task entry point.

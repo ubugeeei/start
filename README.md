@@ -32,6 +32,19 @@ gh api repos/ubugeeei/start/contents/docs/rust.md --jq '.content' | base64 -d
 gh api repos/ubugeeei/start/contents/docs/vue.md --jq '.content' | base64 -d
 ```
 
+## Local Development
+
+Use `nix` for the local toolchain in this repository.
+
+```sh
+nix develop
+vp install
+vp fmt
+```
+
+The dev shell provides `Node.js 24` and `pnpm 10`.
+The project guidelines continue to standardize shared project tasks on `Vite Task` via `vp` and `vp run`.
+
 ## License
 
 MIT

@@ -7,7 +7,7 @@ Use TypeScript when the project needs strong compatibility with the JavaScript e
 - Target `Node.js 24+`.
 - Use `Vite+` as the default TypeScript toolchain.
 - Use `pnpm` as the package manager.
-- Use `pnpm workspace` for monorepos and multi-package projects.
+- Use `pnpm` workspaces for monorepos and multi-package projects.
 - Let `Vite+` manage the runtime, package manager, and frontend workflow.
 - Use `vite-task` as the task runner.
 - Standardize all day-to-day commands behind `vp`.
@@ -89,7 +89,7 @@ Use TypeScript when the project needs strong compatibility with the JavaScript e
 - Trigger release workflows from tag pushes.
 - Use npm trusted publishing.
 - Do not store npm tokens in GitHub Actions.
-- Make npm publishing workspace-aware using `pnpm publish` with `workspace:` protocol resolution.
+- Make npm publishing workspace-aware using `vp pm publish` with `workspace:` protocol resolution.
 - Perform the initial publish from the local CLI, not from CI.
 - Authenticate to npm using passkeys (`npm login --auth-type=web`).
 - Ensure the publish workflow builds and bundles each package correctly before publishing.

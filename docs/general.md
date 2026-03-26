@@ -35,9 +35,19 @@ This directory contains the default technology choices and engineering rules for
 ## Repository Layout
 
 - Place examples under `./examples`.
-- Place TypeScript packages under `./packages`.
-- Place Rust crates under `./crates`.
+- In Rust and TypeScript monorepos, place Rust crates under `./crates`.
+- In Rust and TypeScript monorepos, place TypeScript packages under `./npm`.
+- For Rust to JavaScript or Node.js interop, use `napi-rs`.
+- Use `snake_case` for directory names and file names.
 - Use workspace features instead of ad-hoc multi-package layouts.
+
+## Implementation Discipline
+
+- Keep each implementation unit at `250` lines or fewer.
+- Split files before responsibilities begin to mix.
+- Prefer small, separable modules with a single clear responsibility.
+- Avoid unnecessary allocations, copies, and convenience abstractions.
+- In Rust, prefer `SmallVec`, `CompactString`, and `memchr` where they fit.
 
 ## General Principle
 
@@ -47,5 +57,8 @@ When an AI agent creates a new project, optimize for:
 - minimal incidental complexity
 - strong static guarantees
 - small, separable modules
+- implementations that stay under `250` lines by splitting early
+- unnecessary allocations and copies avoided by default
+- Rust code that leans on `SmallVec`, `CompactString`, and `memchr` where appropriate
 - low allocation overhead where performance matters
 - conventions that are easy for both humans and agents to follow

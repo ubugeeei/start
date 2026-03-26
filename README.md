@@ -12,7 +12,20 @@ A set of opinionated guidelines that AI agents follow when scaffolding new proje
 - Minimal incidental complexity
 - Strong static guarantees
 - Small, focused modules
+- Implementations capped at `250` lines and split by responsibility
+- Avoid unnecessary allocations, copies, and convenience abstractions
+- In Rust, prefer `SmallVec`, `CompactString`, and `memchr` where they fit
 - Low allocation overhead where performance matters
+
+## Repository Conventions
+
+- Place Rust crates under `./crates`.
+- Place TypeScript packages under `./npm`.
+- Place examples under `./examples`.
+- For Rust to JavaScript or Node.js interop, use `napi-rs`.
+- Use `snake_case` for directory names and file names.
+- Keep each implementation unit at `250` lines or fewer.
+- Split files before responsibilities begin to mix.
 
 ## Usage
 

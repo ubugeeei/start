@@ -14,5 +14,7 @@ Use Vue when the project is primarily frontend-driven and benefits from a compon
 ## Code Organization
 
 - Keep component and composable boundaries clear.
+- Keep implementation files at `250` lines or fewer.
 - Prefer structures that align with the referenced style guide instead of inventing project-local conventions.
+- Use `snake_case` for directory names and file names.
 - Place examples under `./examples`.

@@ -12,7 +12,7 @@ Use TypeScript when the project needs strong compatibility with the JavaScript e
 - Use `vite-task` as the task runner.
 - Standardize all day-to-day commands behind `vp`.
 - Use `vp install` instead of calling `pnpm install` directly.
-- Place workspace packages under `./packages`.
+- Place workspace packages under `./npm`.
 
 ## Formatting, Linting, and Testing
 
@@ -77,11 +77,12 @@ Use TypeScript when the project needs strong compatibility with the JavaScript e
 
 ## Code Organization
 
-- Keep files small.
+- Keep files at `250` lines or fewer.
 - Split code into separate files aggressively when responsibilities begin to mix.
 - Prefer minimal, focused modules over large multi-purpose files.
+- Use `snake_case` for directory names and file names.
 - Place examples under `./examples`.
-- Keep multi-package TypeScript code under `./packages`.
+- Keep multi-package TypeScript code under `./npm`.
 
 ## CI and Publishing
 

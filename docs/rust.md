@@ -14,13 +14,14 @@ Use Rust when the project needs native performance, predictable resource usage, 
 
 ## Interop and Targets
 
-- Use `napi-rs` for Node.js bindings.
+- For Rust to JavaScript or Node.js interop, use `napi-rs`.
 - Support `wasm` when browser execution or portable deployment is useful.
 
 ## Data Structure Preferences
 
-- Avoid `String` when a more compact alternative is sufficient. Prefer `CompactString`.
-- Avoid `Vec` when bounded or stack-friendly storage is more appropriate. Prefer `SmallVec`.
+- Prefer `CompactString` over `String` when a compact owned string is sufficient.
+- Prefer `SmallVec` over `Vec` when bounded or stack-friendly storage is appropriate.
+- Use `memchr` for byte-oriented search and parsing paths when it fits.
 - Use string interning when repeated string values would otherwise allocate heavily.
 - Use `FxHashMap` when a fast hash map is appropriate.
 - Use `phf` for static lookup tables known at compile time.
@@ -28,16 +29,20 @@ Use Rust when the project needs native performance, predictable resource usage, 
 ## Memory and Performance Rules
 
 - Minimize memory allocation.
+- Do not introduce unnecessary heap allocation.
 - Prefer arena allocation where it improves ownership simplicity or allocation cost.
 - Do not use `.clone()` unless it is clearly necessary.
 - Do not use `.to_string()` unless it is clearly necessary.
+- Do not use macros unless they are clearly necessary.
+- Do not use `format!` unless there is no simpler alternative.
 - Design APIs and data flow to avoid incidental copies.
 
 ## Code Organization
 
-- Keep files small.
+- Keep files at `250` lines or fewer.
 - Split code into separate files aggressively.
 - Prefer narrow modules with explicit responsibilities.
+- Use `snake_case` for directory names and file names.
 - Place examples under `./examples`.
 - Keep workspace crates under `./crates`.
 
